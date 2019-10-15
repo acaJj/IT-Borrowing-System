@@ -1,0 +1,34 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_BasicLayout";
+    ViewBag.title = "Equipment Request";
+}
+
+    <body>
+        <h1>Equipment Request</h1>
+        <div>
+            <form asp-action="Request" method="post">
+                <div class="form-group">
+                    <label asp-for="Name">Name: </label>
+                    <input class="form-control" asp-for="Name" />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="email" class="form-control" name="email" value="" />
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number: </label>
+                    <input type="tel" class="form-control" name="phone" value="" />
+                </div>
+                <div class="form-group">
+                    <label for="role">Role: </label>
+                    <select id="role" name="role">
+                        <option value="0">Student</option>
+                        <option value="1">Professor</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+    </body>

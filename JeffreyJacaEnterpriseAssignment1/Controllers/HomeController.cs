@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using JeffreyJacaEnterpriseAssignment1.Models;
 
 namespace JeffreyJacaEnterpriseAssignment1.Controllers
 {
@@ -10,6 +11,19 @@ namespace JeffreyJacaEnterpriseAssignment1.Controllers
     {
         public IActionResult Index()
         {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult RequestForm()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult RequestForm(Request request)
+        {
+            RequestRepository.AddRequest(request);
             return View();
         }
     }
