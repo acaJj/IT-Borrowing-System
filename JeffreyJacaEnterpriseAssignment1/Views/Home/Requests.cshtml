@@ -1,0 +1,32 @@
+﻿@model IEnumerable<JeffreyJacaEnterpriseAssignment1.Models.Request>
+@{
+    Layout = "_BasicLayout";
+    ViewBag.title = "Request Listing";
+}
+
+<div>
+    <h2>Listing of All Requests</h2>
+    <table class="table-sm table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Equipment Type</th>
+                <th>Name</th>
+                <th>Role</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (JeffreyJacaEnterpriseAssignment1.Models.Request r in Model)
+            {
+                <tr>
+                    <td>@r.EquipmentType</td>
+                    <td>@r.Name</td>
+                    <td>@r.Role</td>
+                    <td><a href="#">Details</a></td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</div>
+

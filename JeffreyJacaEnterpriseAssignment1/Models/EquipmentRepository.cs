@@ -7,7 +7,7 @@ namespace JeffreyJacaEnterpriseAssignment1.Models
 {
     public class EquipmentRepository
     {
-        public static IEnumerable<Equipment> Equipment { get; set; } = new List<Equipment>();
+        public static IEnumerable<Equipment> Equipment = new List<Equipment>();
         public static IEnumerable<Equipment> GetInitialEquipment()
         {
             return new List<Equipment>()
