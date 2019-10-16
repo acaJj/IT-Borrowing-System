@@ -39,5 +39,10 @@ namespace JeffreyJacaEnterpriseAssignment1.Controllers
         {
             return View(EquipmentRepository.GetInitialEquipment());
         }
+
+        public IActionResult AvailableEquipment()
+        {
+            return View(EquipmentRepository.GetInitialEquipment().Where(e => e.Availability == true));
+        }
     }
 }

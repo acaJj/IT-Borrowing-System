@@ -1,0 +1,32 @@
+﻿@model IEnumerable<JeffreyJacaEnterpriseAssignment1.Models.Equipment>
+@{
+    Layout = "_BasicLayout";
+    ViewBag.title = "Available Equipment";
+}
+
+<div>
+    <h2>Listing of All Equipment Currently Available</h2>
+    <table class="table-sm table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Equipment Type</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (JeffreyJacaEnterpriseAssignment1.Models.Equipment e in Model)
+            {
+                <tr>
+                    <td>@e.Id</td>
+                    <td>@e.Type</td>
+                    <td>@e.Description</td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</div>
+
+
+
