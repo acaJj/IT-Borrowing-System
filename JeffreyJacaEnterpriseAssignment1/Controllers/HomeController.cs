@@ -23,8 +23,16 @@ namespace JeffreyJacaEnterpriseAssignment1.Controllers
         [HttpPost]
         public IActionResult RequestForm(Request request)
         {
-            RequestRepository.AddRequest(request);
-            return View();
+            if (ModelState.IsValid)
+            {
+                RequestRepository.AddRequest(request);
+                return View("Confirmation", request);
+            }
+            else
+            {
+                return View();
+            }
+            
         }
     }
 }

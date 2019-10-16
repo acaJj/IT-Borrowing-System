@@ -1,6 +1,5 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model JeffreyJacaEnterpriseAssignment1.Models.Request
+
 @{
     Layout = "_BasicLayout";
     ViewBag.title = "Equipment Request";
@@ -9,25 +8,40 @@
     <body>
         <h1>Equipment Request</h1>
         <div>
-            <form asp-action="Request" method="post">
+            <form asp-action="RequestForm" method="post">
+                <div asp-validation-summary="All"></div>
                 <div class="form-group">
                     <label asp-for="Name">Name: </label>
                     <input class="form-control" asp-for="Name" />
                 </div>
                 <div class="form-group">
-                    <label for="email">Email: </label>
-                    <input type="email" class="form-control" name="email" value="" />
+                    <label asp-for="Email">Email: </label>
+                    <input class="form-control" asp-for="Email"/>
                 </div>
                 <div class="form-group">
-                    <label for="phone">Phone Number: </label>
-                    <input type="tel" class="form-control" name="phone" value="" />
+                    <label asp-for="PhoneNumber">Phone Number: </label>
+                    <input class="form-control" asp-for="PhoneNumber" />
                 </div>
                 <div class="form-group">
-                    <label for="role">Role: </label>
-                    <select id="role" name="role">
+                    <label asp-for="Role">Role: </label>
+                    <select asp-for="Role">
                         <option value="0">Student</option>
                         <option value="1">Professor</option>
                     </select>
+                </div>
+                <div class="form-group">
+                    <select asp-for="EquipmentType" asp-items="Html.GetEnumSelectList<JeffreyJacaEnterpriseAssignment1.Models.EquipmentType.Equipment>()">
+                        <option selected="selected">Please select the device type</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Details">Details</label>
+                    <input class="form-control" asp-for="Details" />
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-primary" type="submit">
+                        Submit Request
+                    </button>
                 </div>
             </form>
         </div>
