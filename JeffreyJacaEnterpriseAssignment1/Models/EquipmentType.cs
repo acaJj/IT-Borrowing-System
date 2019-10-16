@@ -5,15 +5,11 @@ using System.Threading.Tasks;
 
 namespace JeffreyJacaEnterpriseAssignment1.Models
 {
-    public class EquipmentType
+    public enum EquipmentType
     {
-        public enum Equipment
-        {
-            Laptop,
-            Phone,
-            Tablet,
-            Another
-        }
-
+        Laptop,
+        Phone,
+        Tablet,
+        Another
     }
 }

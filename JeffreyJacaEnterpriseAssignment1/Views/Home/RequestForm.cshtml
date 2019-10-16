@@ -5,7 +5,6 @@
     ViewBag.title = "Equipment Request";
 }
 
-    <body>
         <h1>Equipment Request</h1>
         <div>
             <form asp-action="RequestForm" method="post">
@@ -30,7 +29,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <select asp-for="EquipmentType" asp-items="Html.GetEnumSelectList<JeffreyJacaEnterpriseAssignment1.Models.EquipmentType.Equipment>()">
+                    <select asp-for="EquipmentType" asp-items="Html.GetEnumSelectList<JeffreyJacaEnterpriseAssignment1.Models.EquipmentType>()">
                         <option selected="selected">Please select the device type</option>
                     </select>
                 </div>
@@ -45,4 +44,4 @@
                 </div>
             </form>
         </div>
-    </body>
+    

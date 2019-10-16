@@ -28,7 +28,7 @@ namespace JeffreyJacaEnterpriseAssignment1.Models
         public string Role { get; set; }
 
         [Required(ErrorMessage = "Please choose an equipment type")]
-        public EquipmentType.Equipment EquipmentType { get; set; }
+        public EquipmentType EquipmentType { get; set; }
 
         [Required(ErrorMessage = "Please enter your request details")]
         public string Details { get; set; }
