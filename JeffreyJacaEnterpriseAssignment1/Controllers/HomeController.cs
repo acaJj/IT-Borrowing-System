@@ -49,5 +49,18 @@ namespace JeffreyJacaEnterpriseAssignment1.Controllers
         {
             return View(RequestRepository.GetRequests());
         }
+
+        public IActionResult RequestDetails(int id)
+        {
+            var requests = RequestRepository.GetRequests();
+            var req = requests.SingleOrDefault(r => r.Id == id);
+
+            if(req == null)
+            {
+                return View();
+            }
+
+            return View(req);
+        }
     }
 }

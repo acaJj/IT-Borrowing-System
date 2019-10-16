@@ -1,0 +1,19 @@
+﻿@model JeffreyJacaEnterpriseAssignment1.Models.Request
+@{
+    Layout = "_BasicLayout";
+    ViewBag.title = "Request Details";
+}
+
+    <div>
+        <h2>Details for Request Id @Model.Id</h2>
+        <p>Name: @Model.Name</p>
+        <p>Email: @Model.Email</p>
+        <p>Phone Number: @Model.PhoneNumber</p>
+        <p>Role: @Model.Role</p>
+        <p>Equipment Type: @Model.EquipmentType</p>
+        <p>Details: @Model.Details</p>
+        <p>Duration: @Model.Duration</p>
+
+        <button>Accept</button>
+        <button>Deny</button>
+    </div>
