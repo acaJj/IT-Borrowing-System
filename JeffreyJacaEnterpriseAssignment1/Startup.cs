@@ -26,6 +26,7 @@ namespace JeffreyJacaEnterpriseAssignment1
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseStaticFiles();
             app.UseMvc(routes => {
                 routes.MapRoute(
                     name: "default",

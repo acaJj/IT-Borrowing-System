@@ -4,12 +4,30 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="~/lib/twitter-bootstrap/css/bootstrap-grid.css" rel="stylesheet" type="text/css" />
+    <link href="~/lib/twitter-bootstrap/css/bootstrap-reboot.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <div>
-        <a asp-action="Index">Home</a> | <a asp-action="AllEquipment">All Equipment Listing</a> | <a asp-action="AvailableEquipment">Available Equipment</a> | <a asp-action="RequestForm">Request Form</a>
-    </div>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="Index">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="AllEquipment">All Equipment Listing</a> 
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="AvailableEquipment">Available Equipment</a> 
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="RequestForm">Request Form</a>
+                </li>
+            </ul>
+        </div>
+        
+    </nav>
     <div>
         @RenderBody()
     </div>
