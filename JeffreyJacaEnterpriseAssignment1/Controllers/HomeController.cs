@@ -47,17 +47,17 @@ namespace JeffreyJacaEnterpriseAssignment1.Controllers
 
         public IActionResult Requests()
         {
-            return View(RequestRepository.GetRequests());
+            return View(RequestRepository.Requests);
         }
 
         public IActionResult RequestDetails(int id)
         {
-            var requests = RequestRepository.GetRequests();
+            var requests = RequestRepository.Requests;
             var req = requests.SingleOrDefault(r => r.Id == id);
 
             if(req == null)
             {
-                return View();
+                return View("Index");
             }
 
             return View(req);
